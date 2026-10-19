@@ -8,8 +8,10 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
 import React from "react";
+import "./app.css";
+
+import Navigation from "./components/ui/navigation";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,6 +51,9 @@ export default function App() {
     <div>
       {/* {tsxElement} */}
       {/* {tsElement} */}
+
+      <Navigation />
+
       <Outlet />
     </div>
   );  // will be returned to Layout, index.tsx will be rendered in the Outlet
