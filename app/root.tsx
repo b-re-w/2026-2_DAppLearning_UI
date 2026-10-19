@@ -48,12 +48,10 @@ export default function App() {
   //const tsxElement = <h1 className="title">Hello</h1>
   //const tsElement = React.createElement("h1", { className: "title" }, "Hello");
   return (
-    <div>
+    <div className="py-20 px-5">
       {/* {tsxElement} */}
       {/* {tsElement} */}
-
       <Navigation />
-
       <Outlet />
     </div>
   );  // will be returned to Layout, index.tsx will be rendered in the Outlet
