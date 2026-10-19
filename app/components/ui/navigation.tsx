@@ -9,6 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "./navigation-menu";
 import { Button } from "./button";
+import { rabbykit } from "~/root";
 
 // - Navigation
 //   - Dashboard
@@ -148,7 +149,7 @@ export default function Navigation() {
                 </NavigationMenuList>
             </NavigationMenu>
 
-            <Button>Connect</Button>
+            <Button onClick={ () => { rabbykit.open()} }>Connect</Button>
         </div>
     </nav>
     )

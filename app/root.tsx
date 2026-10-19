@@ -7,6 +7,10 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { createModal } from "@rabby-wallet/rabbykit";
+import { createConfig, http } from "@wagmi/core";
+import { hardhat } from "@wagmi/core/chains";
+
 import type { Route } from "./+types/root";
 import React from "react";
 import "./app.css";
@@ -25,6 +29,34 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+
+export const config = createConfig(
+  /*
+  getDefaultConfig({
+    appName: "RabbyKit example",
+    projectId: "58a22d2bc1c793fc31c117ad9ceba8d9",
+    chains: [mainnet, arbitrum, bsc, optimism, polygon],
+    transports: {
+      [mainnet.id]: http(),
+      [arbitrum.id]: http(),
+      [bsc.id]: http(),
+      [optimism.id]: http(),
+      [polygon.id]: http(),
+    },
+  })
+  */
+  {
+    chains: [hardhat],
+    transports: {
+      [hardhat.id]: http(),
+    },
+  }
+);
+
+export const rabbykit = createModal({
+  wagmi: config,
+});
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
