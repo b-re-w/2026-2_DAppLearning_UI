@@ -25,7 +25,7 @@ export default function Navigation() {
     <NavigationMenu>
         <NavigationMenuList>
             <NavigationMenuItem>
-                <NavigationMenuLink className="font-medium">Dashboard</NavigationMenuLink>
+                <NavigationMenuLink href="/" className="font-medium">Dashboard</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
                 <NavigationMenuTrigger>Survey</NavigationMenuTrigger>
@@ -41,7 +41,7 @@ export default function Navigation() {
                         </li>
                         <li>
                             <NavigationMenuLink>
-                                <Link to="/">
+                                <Link to="/survey/all">
                                     <div className="text-sm leading-none font-medium">
                                         All surveys
                                     </div>
@@ -53,7 +53,7 @@ export default function Navigation() {
                         </li>
                         <li>
                             <NavigationMenuLink>
-                                <Link to="/">
+                                <Link to="/survey/create">
                                     <div className="text-sm leading-none font-medium">
                                         Create survey
                                     </div>
@@ -81,24 +81,12 @@ export default function Navigation() {
                         </li>
                         <li>
                             <NavigationMenuLink>
-                                <Link to="/">
+                                <Link to="/archive/finished">
                                     <div className="text-sm leading-none font-medium">
-                                        All surveys
+                                        Finished surveys
                                     </div>
                                     <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                        List all surveys
-                                    </p>
-                                </Link>
-                            </NavigationMenuLink>
-                        </li>
-                        <li>
-                            <NavigationMenuLink>
-                                <Link to="/">
-                                    <div className="text-sm leading-none font-medium">
-                                        Create survey
-                                    </div>
-                                    <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                        Create survey
+                                        Finished surveys
                                     </p>
                                 </Link>
                             </NavigationMenuLink>
@@ -121,24 +109,24 @@ export default function Navigation() {
                         </li>
                         <li>
                             <NavigationMenuLink>
-                                <Link to="/">
+                                <Link to="/profile/surveys">
                                     <div className="text-sm leading-none font-medium">
-                                        All surveys
+                                        My surveys
                                     </div>
                                     <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                        List all surveys
+                                        My surveys
                                     </p>
                                 </Link>
                             </NavigationMenuLink>
                         </li>
                         <li>
                             <NavigationMenuLink>
-                                <Link to="/">
+                                <Link to="/profile/responses">
                                     <div className="text-sm leading-none font-medium">
-                                        Create survey
+                                        My responses
                                     </div>
                                     <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                        Create survey
+                                        My responses
                                     </p>
                                 </Link>
                             </NavigationMenuLink>
