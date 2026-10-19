@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import React from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,7 +43,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  //const tsxElement = <h1 className="title">Hello</h1>
+  //const tsElement = React.createElement("h1", { className: "title" }, "Hello");
+  return (
+    <div>
+      {/* {tsxElement} */}
+      {/* {tsElement} */}
+      <Outlet />
+    </div>
+  );  // will be returned to Layout, index.tsx will be rendered in the Outlet
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
