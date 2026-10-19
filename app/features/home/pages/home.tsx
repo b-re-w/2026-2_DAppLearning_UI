@@ -1,4 +1,4 @@
-import { supabase } from "~/postgres/supabaseClient";
+import { supabase } from "~/postgres/supabase-client";
 
 // before rendering Home react component (works on server side)
 export async function loader() {
