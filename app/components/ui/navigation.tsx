@@ -21,6 +21,12 @@ import { Button } from "./button";
 //     - My Surveys
 //     - My Responses
 
+// - Wallet Connector Kits
+//   - RainbowKit
+//   - AppKit
+//   - RabbyKit
+//   - ...
+
 export default function Navigation() {
     return (
     <nav className="fixed top-0 right-0 left-0">
